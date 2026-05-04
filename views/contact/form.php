@@ -42,10 +42,8 @@ $is_checked_box = fn(string $name, string $val): string
 
   <!-- ══════════════════ MAIN ══════════════════ -->
   <main>
-    <div style="display:flex; gap:3rem; flex-wrap:wrap; align-items:flex-start;">
-
-      <!-- ── Formulaire ─────────────────────────────────── -->
-      <section style="flex:2; min-width:300px;" aria-labelledby="titre-form">
+    <div style="display: flex; flex-direction: row; gap: 1rem; align-items: flex-start; width: 100%; max-width: 1200px; margin: 0 auto; padding: 20px;">      <!-- ── Formulaire ─────────────────────────────────── -->
+      <section style="flex:2; min-width: 400px;" aria-labelledby="titre-form">
         <div class="section-title">
           <span class="icon">📋</span>
           <h2 id="titre-form">Formulaire d'Inscription</h2>
@@ -140,10 +138,7 @@ $is_checked_box = fn(string $name, string $val): string
                   <input type="radio" name="genre" value="femme"<?= $is_checked_radio('genre','femme') ?> />
                   <span>👩 Femme</span>
                 </label>
-                <label class="radio-option">
-                  <input type="radio" name="genre" value="autre"<?= $is_checked_radio('genre','autre') ?> />
-                  <span>Autre / Préfère ne pas préciser</span>
-                </label>
+               
               </div>
               <?= $err('genre') ?>
             </div>
@@ -175,7 +170,7 @@ $is_checked_box = fn(string $name, string $val): string
               Sélectionnez au moins une activité qui vous intéresse :
             </p>
             <div class="form-group full <?= isset($errors['activites']) ? 'field-error' : '' ?>" id="wrap-activites">
-              <div class="checkbox-group" role="group">
+              <div class="checkbox-group" role="group" aria-labelledby="label-activites">
                 <?php
                 $activites_list = [
                   'courses'      => '⛵ Participation aux courses et régates',
@@ -197,7 +192,7 @@ $is_checked_box = fn(string $name, string $val): string
 
             <!-- ── Section 5 : Disponibilités ── -->
             <div class="form-section-title">📅 Disponibilités</div>
-            <div class="form-group full">
+            <div class="form-group full"  id="wrap-dispo">
               <div class="checkbox-group horizontal" role="group"
                    style="flex-direction:row; flex-wrap:wrap; gap:0.8rem;">
                 <?php
@@ -209,8 +204,8 @@ $is_checked_box = fn(string $name, string $val): string
                 ];
                 foreach ($dispos as $val => $label): ?>
                   <label class="check-option">
-                    <input type="checkbox" name="dispo[]" value="<?= h($val) ?>"<?= $is_checked_box('disponibilites', $val) ?> />
-                    <span><?= h($label) ?></span>
+                  <input type="checkbox" name="dispo[]" value="<?= h($val) ?>"<?= $is_checked_box('dispo', $val) ?> />                   
+                  <span><?= h($label) ?></span>
                   </label>
                 <?php endforeach; ?>
               </div>
@@ -263,7 +258,7 @@ $is_checked_box = fn(string $name, string $val): string
               <?= $err('reglement') ?>
             </div>
 
-            <div class="form-group full">
+            <div class="form-group full" id="cgu-wrap">
               <label class="check-option">
                 <input type="checkbox" id="newsletter" name="newsletter" value="oui"
                        <?= !empty($old['newsletter']) ? 'checked' : '' ?> />
@@ -292,7 +287,7 @@ $is_checked_box = fn(string $name, string $val): string
       </section>
 
       <!-- ── Colonne latérale ── -->
-      <aside style="flex:1; min-width:260px;" aria-label="Informations pratiques">
+      <aside style="flex:1; min-width:200px;" aria-label="Informations pratiques">
         <div class="section-title">
           <span class="icon">ℹ️</span>
           <h2>Infos Pratiques</h2>
@@ -307,16 +302,15 @@ $is_checked_box = fn(string $name, string $val): string
           <p style="font-size:0.82rem; color:var(--texte-moyen);">
             Accès par ferry depuis le port de Sfax (40 min).
           </p>
-          <a href="https://maps.google.com" target="_blank" rel="noopener"
-             class="btn btn-mer mt-1" style="font-size:0.88rem; padding:0.6rem 1.2rem;">
+          <a href="https://maps.app.goo.gl/cz5ELscmej6GsAmdA" target="_blank" rel="noopener" class="btn btn-mer mt-1" style="font-size:0.88rem; padding:0.6rem 1.2rem;">
             📌 Voir sur la carte ↗
           </a>
         </div>
         <div class="highlight-box" style="margin-bottom:1.5rem;">
           <h3>📞 Nous Contacter</h3>
           <ul class="liste-mer" style="margin-top:0.8rem;">
-            <li>Tél : +216 74 XXX XXX</li>
-            <li>E-mail : contact@felouques-kerkennah.tn</li>
+            <li>Tél : +216 74 223 121</li>
+            <li>E-mail : planche_a_voile_club@felouques-kerkennah.tn</li>
             <li>Permanence : Mar–Dim, 9h–18h</li>
           </ul>
         </div>
@@ -343,6 +337,3 @@ $is_checked_box = fn(string $name, string $val): string
   </main>
 
 <?php require __DIR__ . '/../layout/footer.php'; ?>
-<script src="public/script.js"></script>
-</body>
-</html>

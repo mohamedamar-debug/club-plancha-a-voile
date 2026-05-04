@@ -83,19 +83,19 @@ CREATE TABLE IF NOT EXISTS inscriptions_courses (
 
 
 -- ─────────────────────────────────────────────────────────────
--- DONNÉES INITIALES : Calendrier 2025
+-- DONNÉES INITIALES : Calendrier 2026
 -- ─────────────────────────────────────────────────────────────
 INSERT INTO evenements
     (nom_epreuve, date_debut, heure_depart, parcours, distance_mn, categorie, statut) VALUES
-('Régate d\'Ouverture — Coupe du Printemps',     '2025-03-15', '08:00', 'Port Sidi Fredj → Pointe Sable → Retour', '12', 'Toutes catégories',        'complet'),
-('Championnat Juniors — Manche 1',                '2025-04-05', '09:00', 'Lagune de Gharbi — Boucle',                '8',  'Juniors (–25 ans)',         'complet'),
-('Régate Tradition — Felouques Classiques',       '2025-04-19', '07:30', 'Gharbi → Chergui → Port Sfax',            '22', 'Felouques antérieures à 1980', 'ouvert'),
-('Coupe des Gouvernorats — Sélective',            '2025-05-03', '08:00', 'Parcours côtier inter-îles',               '18', 'Séniors confirmés',         'ouvert'),
-('Grande Traversée du Golfe',                     '2025-05-17', '06:00', 'Kerkennah → Mahdia aller-retour',          '65', 'Expert / Confirmé',         'ouvert'),
-('Championnat Juniors — Manche 2',                '2025-06-07', '09:00', 'Lagune de Gharbi — Sprint',                '6',  'Juniors (–25 ans)',         'ouvert'),
-('Nuit des Felouques — Course Nocturne',          '2025-06-21', '21:00', 'Circuit Illuminé — Lagon de Chergui',     '10', 'Séniors (navigation nocturne)', 'bientot'),
-('Festival Nautique de Kerkennah',                '2025-07-12', '10:00', 'Festivités & Démonstrations',              NULL, 'Tout public',               'bientot'),
-('Championnat Tunisien de Felouque — Sélective',  '2025-08-02', '07:00', 'Parcours officiel FTVAN',                  '25', 'National — Qualifiés',      'bientot'),
-('Championnat Tunisien de Felouque — Finale',     '2025-08-23', '08:00', 'Grand Parcours du Golfe de Gabès',        '40', 'National — Élite',          'bientot'),
-('Régate de la Rentrée — Coupe d\'Automne',       '2025-09-20', '09:00', 'Tour de l\'Île de Gharbi',                '15', 'Toutes catégories',         'bientot'),
-('Clôture de Saison — Trophée du Président',      '2025-10-18', '10:00', 'Parcours de clôture + Cérémonie',         '12', 'Toutes catégories',         'bientot');
+('Régate d\'Ouverture — Coupe du Printemps',     '2026-03-15', '08:00', 'Port Sidi Fredj → Pointe Sable → Retour', '12', 'Toutes catégories',        'complet'),
+('Championnat Juniors — Manche 1',                '2026-04-05', '09:00', 'Lagune de Gharbi — Boucle',                '8',  'Juniors (–25 ans)',         'complet'),
+('Régate Tradition — Felouques Classiques',       '2026-04-19', '07:30', 'Gharbi → Chergui → Port Sfax',            '22', 'Felouques antérieures à 1980', 'complet'),
+('Coupe des Gouvernorats — Sélective',            '2026-05-03', '08:00', 'Parcours côtier inter-îles',               '18', 'Séniors confirmés',         'complet'),
+('Grande Traversée du Golfe',                     '2026-05-17', '06:00', 'Kerkennah → Mahdia aller-retour',          '65', 'Expert / Confirmé',         'ouvert'),
+('Championnat Juniors — Manche 2',                '2026-06-07', '09:00', 'Lagune de Gharbi — Sprint',                '6',  'Juniors (–25 ans)',         'ouvert'),
+('Nuit des Felouques — Course Nocturne',          '2026-06-21', '21:00', 'Circuit Illuminé — Lagon de Chergui',     '10', 'Séniors (navigation nocturne)', 'bientot'),
+('Festival Nautique de Kerkennah',                '2026-07-12', '10:00', 'Festivités & Démonstrations',              NULL, 'Tout public',               'bientot'),
+('Championnat Tunisien de Felouque — Sélective',  '2026-08-02', '07:00', 'Parcours officiel FTVAN',                  '25', 'National — Qualifiés',      'bientot'),
+('Championnat Tunisien de Felouque — Finale',     '2026-08-23', '08:00', 'Grand Parcours du Golfe de Gabès',        '40', 'National — Élite',          'bientot'),
+('Régate de la Rentrée — Coupe d\'Automne',       '2026-09-20', '09:00', 'Tour de l\'Île de Gharbi',                '15', 'Toutes catégories',         'bientot'),
+('Clôture de Saison — Trophée du Président',      '2026-10-18', '10:00', 'Parcours de clôture + Cérémonie',         '12', 'Toutes catégories',         'bientot');

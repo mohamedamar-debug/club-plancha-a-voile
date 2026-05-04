@@ -19,8 +19,8 @@ declare(strict_types=1);
         <h4>Navigation</h4>
         <ul>
           <li><a href="index.php">Accueil</a></li>
-          <li><a href="histoire.html">Histoire & Équipement</a></li>
-          <li><a href="galerie.html">Galerie Multimédia</a></li>
+          <li><a href="histoire.php">Histoire & Équipement</a></li>
+          <li><a href="galerie.php">Galerie Multimédia</a></li>
           <li><a href="calendrier.php">Calendrier des Courses</a></li>
           <li><a href="contact.php">Contact & Inscription</a></li>
         </ul>
@@ -28,12 +28,12 @@ declare(strict_types=1);
       <div class="footer-col footer-contact">
         <h4>Contact</h4>
         <p>📍 Port de Sidi Fredj, Kerkennah, Sfax</p>
-        <p>📞 +216 74 XXX XXX</p>
-        <p>✉️ contact@felouques-kerkennah.tn</p>
+        <p>📞+216 74 223 121</p>
+        <p>✉️planche_a_voile_club@felouques-kerkennah.tn</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Club des Felouques de Kerkennah — Tous droits réservés</span>
+      <span>© 2026 Club des Felouques de Kerkennah — Tous droits réservés</span>
       <span>Fait avec ❤️ pour la mer de Kerkennah</span>
     </div>
   </footer>

@@ -8,7 +8,7 @@ declare(strict_types=1);
 $page_title   = $page_title   ?? 'Club des Felouques de Kerkennah';
 $current_page = $current_page ?? '';
 
-send_security_headers();
+//send_security_headers();
 ?>
 <!DOCTYPE html>
 <html lang="fr" data-page="<?= h($current_page) ?>">
@@ -18,6 +18,7 @@ send_security_headers();
   <meta name="description" content="Club des Felouques de Kerkennah — La voile traditionnelle." />
   <title><?= h($page_title) ?> — Club des Felouques de Kerkennah</title>
   <link rel="stylesheet" href="public/style.css" />
+  <link rel="icon" href="media/icon.png" type="image/png" />
 </head>
 <body>
 
@@ -33,8 +34,8 @@ send_security_headers();
       <nav aria-label="Navigation principale">
         <ul>
           <li><a href="index.php" <?= $current_page === 'index' ? 'class="active"' : '' ?>>Accueil</a></li>
-          <li><a href="histoire.html" <?= $current_page === 'histoire' ? 'class="active"' : '' ?>>Histoire</a></li>
-          <li><a href="galerie.html" <?= $current_page === 'galerie' ? 'class="active"' : '' ?>>Galerie</a></li>
+          <li><a href="histoire.php" <?= $current_page === 'histoire' ? 'class="active"' : '' ?>>Histoire</a></li>
+          <li><a href="galerie.php" <?= $current_page === 'galerie' ? 'class="active"' : '' ?>>Galerie</a></li>
           <li><a href="calendrier.php" <?= $current_page === 'calendrier' ? 'class="active"' : '' ?>>Calendrier</a></li>
           <li><a href="contact.php" <?= $current_page === 'contact' ? 'class="active"' : '' ?>>Contact</a></li>
         </ul>

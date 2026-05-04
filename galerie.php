@@ -1,35 +1,14 @@
-<!DOCTYPE html>
-<html lang="fr" data-page="galerie">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Galerie multimédia du Club des Felouques de Kerkennah : photos, vidéos et sons de la mer." />
-  <title>Galerie — Club des Felouques de Kerkennah</title>
-  <link rel="stylesheet" href="./public/style.css" />
-  <link rel="icon" type="image/png" href="./media/icon.png">
-</head>
-<body>
+<?php
+/**
+ * galerie.php — Front Controller pour la page Galerie Multimédia
+ */ 
+declare (strict_types=1);
+require_once __DIR__ . '/config/security.php';
+$page_title = 'Galerie';
+$current_page = 'galerie';
 
-  <header>
-    <div class="header-inner">
-      <div class="logo-area">
-        <span class="logo-icon animate-wave">⛵</span>
-        <div class="logo-text">
-          <span class="logo-title">Club des Felouques</span>
-          <span class="logo-subtitle">Kerkennah • Tunisie</span>
-        </div>
-      </div>
-      <nav aria-label="Navigation principale">
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="histoire.html">Histoire</a></li>
-          <li><a href="galerie.html" class="active">Galerie</a></li>
-          <li><a href="calendrier.html">Calendrier</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+require __DIR__ . '/views/layout/header.php';
+?>
 
   <section class="hero" aria-label="En-tête Galerie">
     <div class="hero-content">
@@ -183,37 +162,5 @@
 
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="logo-area">
-          <span style="font-size:1.8rem">⛵</span>
-          <span class="logo-title">Club des Felouques de Kerkennah</span>
-        </div>
-        <p>Gardiens de la tradition maritime tunisienne depuis 1987.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="histoire.html">Histoire & Équipement</a></li>
-          <li><a href="galerie.html">Galerie Multimédia</a></li>
-          <li><a href="calendrier.html">Calendrier des Courses</a></li>
-          <li><a href="contact.html">Contact & Inscription</a></li>
-        </ul>
-      </div>
-      <div class="footer-col footer-contact">
-        <h4>Contact</h4>
-        <p>📍 Port de Sidi Fredj, Kerkennah, Sfax</p>
-        <p>📞 +216 74 223 121</p>
-        <p>✉️ planche_a_voile_club@felouques-kerkennah.tn</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Club des Felouques de Kerkennah — Tous droits réservés</span>
-      <span>Fait avec ❤️ pour la mer de Kerkennah</span>
-    </div>
-  </footer>
+  <?php require __DIR__ . '/views/layout/footer.php'; ?>
 
-</body>
-</html>
