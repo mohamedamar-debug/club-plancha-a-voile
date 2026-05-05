@@ -1,11 +1,5 @@
 <?php
-/**
- * models/Inscription.php
- * Modèle — Gestion des membres / inscriptions
- *
- * Toutes les requêtes utilisent des requêtes préparées PDO
- * → protection totale contre les injections SQL (OWASP A03).
- */
+
 
 declare(strict_types=1);
 
@@ -164,10 +158,6 @@ class Inscription
     // SUPPRESSION
     // ─────────────────────────────────────────────────────────────────────
 
-    /**
-     * Supprime un membre par son ID.
-     * La suppression en cascade est gérée par la FK dans `inscriptions_courses`.
-     */
     public function delete(int $id): bool
     {
         $stmt = $this->db->prepare("DELETE FROM membres WHERE id = :id");

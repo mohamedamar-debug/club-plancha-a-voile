@@ -44,11 +44,7 @@ $is_checked_box = fn(string $name, string $val): string
 
         <div class="form-card">
 
-          <!--
-            ACTION → contact.php (le même front-controller gère GET et POST)
-            METHOD → POST (jamais GET pour les données personnelles)
-            NOVALIDATE → on gère la validation côté serveur + JS
-          -->
+         
           <form id="form-inscription"
                 action="contact.php"
                 method="POST"

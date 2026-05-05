@@ -1,8 +1,5 @@
 <?php
-/**
- * views/layout/header.php
- * En-tête partagée par toutes les pages PHP
- */
+
 declare(strict_types=1);
 
 $page_title   = $page_title   ?? 'Club des Felouques de Kerkennah';

@@ -1,8 +1,5 @@
 <?php
-/**
- * views/layout/footer.php
- * Pied de page partagé
- */
+
 declare(strict_types=1);
 ?>
 
