@@ -4,7 +4,6 @@
  * Contrôleur — Gestion du formulaire d'inscription
  *
  * SÉCURITÉ :
- *  - Vérification CSRF avant tout traitement
  *  - Validation stricte côté serveur (ne jamais faire confiance au JS)
  *  - Nettoyage de toutes les entrées via clean()
  *  - Requêtes préparées dans le modèle → pas d'injection SQL
@@ -47,10 +46,8 @@ class ContactController
 
     public function handleForm(): void
     {
-        // 1. Vérification CSRF (bloque toute requête Cross-Site)
-        verify_csrf();
-
-        // 2. Anti-spam honeypot : le champ "website" doit rester vide
+    
+        //  Anti-spam honeypot : le champ "website" doit rester vide
         if (!empty($_POST['website'])) {
             // Faux succès pour ne pas alerter les bots
             flash('success', '✅ Votre demande a bien été enregistrée. Nous vous contacterons sous 48h.');

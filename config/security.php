@@ -11,10 +11,11 @@
  *  A08 – CSRF : jeton synchroniseur (STP pattern)
  */
 
-declare(strict_types=1);
+declare(strict_types=1); 
+
 
 // ─── Démarrage de session sécurisé ─────────────────────────────────────────
-if (session_status() === PHP_SESSION_NONE) {
+if (session_status() === PHP_SESSION_NONE) { 
     session_set_cookie_params([
         'lifetime' => 0,
         'path'     => '/',
@@ -23,57 +24,6 @@ if (session_status() === PHP_SESSION_NONE) {
         'samesite' => 'Strict',                  // Anti-CSRF supplémentaire
     ]);
     session_start();
-}
-
-// ─── Headers de sécurité HTTP ──────────────────────────────────────────────
-function send_security_headers(): void
-{
-    header('X-Frame-Options: DENY');
-    header('X-Content-Type-Options: nosniff');
-    header('X-XSS-Protection: 1; mode=block');
-    header('Referrer-Policy: strict-origin-when-cross-origin');
-    header("Content-Security-Policy: default-src 'self'; "
-         . "style-src 'self' https://fonts.googleapis.com; "
-         . "font-src 'self' https://fonts.gstatic.com; "
-         . "script-src 'self'; "
-         . "img-src 'self' data:; "
-         . "media-src 'self'");
-}
-
-// ─── Jeton CSRF (STP — Synchronizer Token Pattern) ────────────────────────
-
-/**
- * Génère (ou récupère) le jeton CSRF de la session courante.
- */
-function csrf_token(): string
-{
-    if (empty($_SESSION['csrf_token'])) {
-        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-    }
-    return $_SESSION['csrf_token'];
-}
-
-/**
- * Génère un champ caché HTML contenant le jeton CSRF.
- */
-function csrf_field(): string
-{
-    return '<input type="hidden" name="csrf_token" value="' . h(csrf_token()) . '">';
-}
-
-/**
- * Vérifie le jeton CSRF soumis via POST.
- * Lance une exception si invalide (double protection : hash_equals évite
- * les attaques par timing).
- */
-function verify_csrf(): void
-{
-    $token = $_POST['csrf_token'] ?? '';
-    if (!hash_equals(csrf_token(), $token)) {
-        http_response_code(403);
-        die('Requête invalide (token CSRF manquant ou expiré). '
-           . '<a href="javascript:history.back()">Retour</a>');
-    }
 }
 
 // ─── Échappement HTML (anti-XSS) ───────────────────────────────────────────

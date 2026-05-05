@@ -61,8 +61,7 @@ $is_checked_box = fn(string $name, string $val): string
                 method="POST"
                 novalidate>
 
-            <!-- ── Jeton CSRF (protection OWASP A08) ── -->
-            <?= csrf_field() ?>
+          
 
             <!-- ── Section 1 : Informations personnelles ── -->
             <div class="form-section-title">👤 Informations Personnelles</div>

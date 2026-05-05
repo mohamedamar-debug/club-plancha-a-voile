@@ -24,7 +24,7 @@ require __DIR__ . '/views/layout/header.php';
       </p>
       <div class="hero-btns">
         <a href="contact.php" class="btn btn-primary">⚓ Rejoindre le club</a>
-        <a href="histoire.html" class="btn btn-secondary">Découvrir l'histoire →</a>
+        <a href="histoire.php" class="btn btn-secondary">Découvrir l'histoire →</a>
       </div>
     </div>
   </section>
@@ -67,7 +67,7 @@ require __DIR__ . '/views/layout/header.php';
           ces élégantes embarcations en bois à voile latine qui sillonnent la Méditerranée depuis
           des siècles. Un patrimoine vivant, entre tradition et passion moderne.
         </p>
-        <a href="histoire.html" class="btn btn-mer mt-1">Lire notre histoire complète →</a>
+        <a href="histoire.php" class="btn btn-mer mt-1">Lire notre histoire complète →</a>
       </div>
     </section>
 
@@ -87,7 +87,7 @@ require __DIR__ . '/views/layout/header.php';
               Des régates régulières entre les îles de Kerkennah, sur des parcours
               qui mettent en valeur la maîtrise des vents méditerranéens.
             </p>
-            <a href="calendrier.html" class="btn btn-mer">Voir le calendrier</a>
+            <a href="calendrier.php" class="btn btn-mer">Voir le calendrier</a>
           </div>
         </article>
 
@@ -111,7 +111,7 @@ require __DIR__ . '/views/layout/header.php';
               Des cours pour tous les niveaux : initiation, perfectionnement,
               et certification de skipper de felouque traditionnelle.
             </p>
-            <a href="contact.html" class="btn btn-mer">En savoir plus</a>
+            <a href="contact.php" class="btn btn-mer">En savoir plus</a>
           </div>
         </article>
 
@@ -123,7 +123,7 @@ require __DIR__ . '/views/layout/header.php';
               Festivals maritimes, expositions photo et rencontres avec les pêcheurs
               pour célébrer la culture maritime de Kerkennah.
             </p>
-            <a href="galerie.html" class="btn btn-mer">Voir la galerie</a>
+            <a href="galerie.php" class="btn btn-mer">Voir la galerie</a>
           </div>
         </article>
       </div>
@@ -180,7 +180,7 @@ require __DIR__ . '/views/layout/header.php';
             <h3>Nouveau Chantier Naval</h3>
             <p style="font-size:0.82rem; color:var(--sable); margin-bottom:0.5rem;">3 Mars 2026</p>
             <p>Le club inaugure son nouveau chantier de construction et de restauration de felouques traditionnelles.</p>
-            <a href="galerie.html" class="btn btn-mer">Voir les photos →</a>
+            <a href="galerie.php" class="btn btn-mer">Voir les photos →</a>
           </div>
         </article>
 
