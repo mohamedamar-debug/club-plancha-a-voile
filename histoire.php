@@ -1,0 +1,143 @@
+<?php
+/**
+ * histoire.php — Front Controller pour la page Histoire
+ */ 
+declare (strict_types=1);
+require_once __DIR__ . '/config/security.php';
+$page_title = 'Histoire';
+$current_page = 'histoire';
+
+require __DIR__ . '/views/layout/header.php';
+?>
+
+  <section class="hero" aria-label="En-tête Histoire">
+    <div class="hero-content">
+      <div class="hero-badge">📜 Patrimoine Maritime</div>
+      <h1>L'Histoire des Felouques<br/><em>de Kerkennah</em></h1>
+      <p>Des siècles de tradition maritime, de savoir-faire et de passion pour la mer Méditerranée.</p>
+    </div>
+  </section>
+
+  <main>
+
+    <section aria-labelledby="titre-histoire">
+      <div class="section-title">
+        <span class="icon">🏛️</span>
+        <h2 id="titre-histoire">Les Origines de la Navigation Kerkennienne</h2>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Une Mer, Un Peuple, Une Tradition</h3>
+        <p>
+          La navigation à voile dans l'archipel de Kerkennah remonte à plus de <strong>3 000 ans</strong>.
+          Les Phéniciens, grands navigateurs méditerranéens, ont les premiers sillonné ces eaux peu
+          profondes, développant des embarcations adaptées aux spécificités de ce lagon naturel.
+        </p>
+        <p>
+          Les Romains, qui exploitaient les eaux poissonneuses du golfe de Gabès, ont laissé des
+          traces archéologiques témoignant d'une activité maritime intense. L'archipel a ensuite connu
+          l'influence arabe puis turque ottomane, chaque civilisation apportant sa contribution à
+          l'art de la navigation locale.
+        </p>
+        <p>
+          Consultez également :
+          <a href="https://fr.wikipedia.org/wiki/Felouque" target="_blank" rel="noopener" style="color:var(--bleu-mer);text-decoration:underline;">
+            Wikipedia — La Felouque ↗
+          </a>
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-img" style="background:linear-gradient(135deg,#1a3a5c,#1a6b8a);"><img src="media/Ère_Antique.png" alt="Ère Antique" /></div>
+          <div class="card-body">
+            <h3>Ère Antique</h3>
+            <p>Les Phéniciens et Romains établissent les premières routes maritimes autour de Kerkennah, exploitant la richesse des fonds marins.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img" style="background:linear-gradient(135deg,#1a6b8a,#3daac7);"><img src="media/Médiévale.png" alt="Période Médiévale" /></div>
+          <div class="card-body">
+            <h3>Période Médiévale</h3>
+            <p>Les navigateurs arabes perfectionnent la voile latine — la <em>felouque</em> prend sa forme définitive, idéale pour les vents méditerranéens.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img" style="background:linear-gradient(135deg,#3daac7,#5bcfdf);"><img src="media/Moderne.png" alt="Époque Moderne" /></div>
+          <div class="card-body">
+            <h3>Époque Moderne</h3>
+            <p>Au XIXe–XXe siècle, les felouques restent le principal moyen de transport et de pêche entre les îles, résistant à la motorisation.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="titre-felouque">
+      <div class="section-title">
+        <span class="icon">⛵</span>
+        <h2 id="titre-felouque">La Felouque : Caractéristiques</h2>
+      </div>
+      <div class="highlight-box">
+        <h3>Une Embarcation Unique</h3>
+        <p>La felouque de Kerkennah est une embarcation en bois à fond plat, idéalement conçue pour naviguer dans les faibles profondeurs de l'archipel — souvent moins de 2 mètres. Sa voile latine triangulaire lui permet de remonter au vent avec une efficacité remarquable.</p>
+      </div>
+
+      <h3 class="mt-2" style="margin-bottom:1rem;">⚙️ Équipement principal d'une felouque</h3>
+      <ul class="liste-mer">
+        <li>La <strong>coque</strong> en bois de pin local, longue de 6 à 10 mètres</li>
+        <li>Le <strong>mât</strong> incliné vers l'avant, caractéristique de la voile latine</li>
+        <li>La <strong>voile latine</strong> triangulaire en toile de coton ou synthétique</li>
+        <li>Le <strong>gouvernail</strong> latéral en bois, manœuvré à la main</li>
+        <li>Les <strong>avirons</strong> pour la propulsion par vent faible</li>
+        <li>L'<strong>ancre</strong> en fer forgé et sa chaîne</li>
+        <li>Les <strong>cordages</strong> et poulies en bois sculpté</li>
+        <li>La <strong>boussole</strong> traditionnelle et les cartes marines</li>
+      </ul>
+
+      <h3 class="mt-2" style="margin-bottom:1rem; margin-top:2rem;">🔢 Étapes de construction d'une felouque</h3>
+      <ol class="liste-mer">
+        <li><strong>Sélection du bois</strong> — Choix du pin ou du chêne-liège selon la tradition locale</li>
+        <li><strong>Tracé de la quille</strong> — La charpente longitudinale de l'embarcation</li>
+        <li><strong>Pose des membrures</strong> — Les côtes de bois qui forment la coque</li>
+        <li><strong>Bordage</strong> — Fixation des planches de bois sur les membrures</li>
+        <li><strong>Calfatage</strong> — Étanchéification avec de l'étoupe et du goudron végétal</li>
+        <li><strong>Installation du mât et du gréement</strong> — Pose de la voile latine</li>
+        <li><strong>Peinture et finitions</strong> — Application des couleurs traditionnelles (bleu et blanc)</li>
+        <li><strong>Mise à l'eau</strong> — Cérémonie traditionnelle de bénédiction de l'embarcation</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="titre-traditions">
+      <div class="section-title">
+        <span class="icon">🎭</span>
+        <h2 id="titre-traditions">Traditions et Savoir-Faire</h2>
+      </div>
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-img"><img src="media/charfia.png" alt="La Charfia" /></div>
+          <div class="card-body">
+            <h3>La Pêche à la Charfia</h3>
+            <p>Technique unique au monde : des palissades de roseaux en forme de V guident les poissons vers un piège. Ce patrimoine immatériel est inscrit à l'UNESCO depuis 2020.</p>
+            <a href="https://ich.unesco.org" target="_blank" rel="noopener" class="btn btn-mer">UNESCO ↗</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img"><img src="media/charpentier.png" alt="Les Charpentiers de Marine" /></div>
+          <div class="card-body">
+            <h3>Les Charpentiers de Marine</h3>
+            <p>Les <em>najjarin</em> (menuisiers navals) de Kerkennah transmettent leur art de père en fils. Notre club abrite l'un des derniers ateliers actifs de l'archipel.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img"><img src="media/chant.png" alt="Les Chants de Mer" /></div>
+          <div class="card-body">
+            <h3>Les Chants de Mer</h3>
+            <p>Les pêcheurs de Kerkennah ont développé un répertoire de chants traditionnels (<em>malouf maritime</em>) pour rythmer le travail en mer et célébrer les bonnes pêches.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <?php require __DIR__ . '/views/layout/footer.php'; ?>
