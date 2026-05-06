@@ -28,10 +28,16 @@ class ContactController
 
         // --- TES VÉRIFICATIONS ---
         
-        // 1. Email valide
-        if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
-            $errors['email'] = "L'adresse e-mail n'est pas correcte.";
-        }
+        // 1. Email valide (format)
+if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+    $errors['email'] = "L'adresse e-mail n'est pas correcte.";
+}
+
+// 2.  Vérification du doublon (Sécurité)
+// On demande au modèle : "Est-ce que cet email existe déjà ?"
+elseif ($this->model->emailExists($data['email'])) {
+    $errors['email'] = "Désolé, cet e-mail est déjà utilisé pour une inscription.";
+}
 
         // 2. Téléphone (exactement 8 chiffres)
         if (!preg_match('/^[0-9]{8}$/', $data['telephone'])) {
