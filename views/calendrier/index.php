@@ -27,6 +27,7 @@ require __DIR__ . '/../layout/header.php';
 
     <?php
     // ── Statistiques dynamiques depuis la BDD ────────────────────────────
+    $evenements = $evenements ?? [];      
     $total       = count($evenements);
     $nb_ouverts  = count(array_filter($evenements, fn($e) => $e['statut'] === 'ouvert'));
     $nb_complets = count(array_filter($evenements, fn($e) => $e['statut'] === 'complet'));

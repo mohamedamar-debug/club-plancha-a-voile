@@ -886,3 +886,32 @@ footer {
   color: var(--bleu-profond);
   font-weight: 700;
 }
+.flash-msg {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 2.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  animation: fadeInUp 0.4s ease both;
+}
+
+.flash-success {
+  background: #d4f5e4;
+  border-left: 5px solid #0a6640;
+  color: #0a6640;
+}
+
+.flash-error {
+  background: #fdf2f2;
+  border-left: 5px solid #c0392b;
+  color: #c0392b;
+}
+
+.flash-info {
+  background: rgba(61,170,199,0.12);
+  border-left: 5px solid var(--bleu-clair);
+  color: var(--bleu-profond);
+}

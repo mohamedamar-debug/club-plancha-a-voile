@@ -106,6 +106,15 @@ class Inscription
         $stmt->execute([':email' => strtolower($email)]);
         return (bool) $stmt->fetchColumn();
     }
+    public function phoneExists(string $phone): bool
+    {
+    $sql = "SELECT COUNT(*) FROM membres WHERE telephone = :phone";
+    $stmt = $this->db->prepare($sql);
+    $stmt->execute(['phone' => $phone]);
+    
+    // Si le compte est supérieur à 0, le téléphone existe déjà
+    return $stmt->fetchColumn() > 0;
+    }
 
     // ─────────────────────────────────────────────────────────────────────
     // MISE À JOUR

@@ -9,17 +9,9 @@
 
 'use strict';
 
-// ─────────────────────────────────────────────────────────────────────────────
-// UTILITAIRES
-// ─────────────────────────────────────────────────────────────────────────────
-
-/**
- * Affiche ou masque un message d'erreur pour un champ.
- * @param {HTMLElement} field    - L'élément input/select/textarea
- * @param {string|null} message  - Message d'erreur, ou null pour effacer
- */
 function setError(field, message) {
-  // On cherche le .error-msg frère le plus proche
+
+
   const wrap = field.closest('.form-group') || field.closest('[id^="wrap-"]');
   if (!wrap) return;
 
@@ -42,11 +34,6 @@ function setError(field, message) {
   }
 }
 
-/**
- * Affiche l'alerte globale du formulaire.
- * @param {'error'|'success'} type
- * @param {string} message
- */
 function showAlert(type, message) {
   const alert = document.getElementById('form-alert');
   if (!alert) return;
@@ -61,9 +48,6 @@ function hideAlert() {
   if (alert) { alert.style.display = 'none'; alert.className = ''; }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// RÈGLES DE VALIDATION
-// ─────────────────────────────────────────────────────────────────────────────
 
 const RULES = {
   prenom(val) {
@@ -104,15 +88,11 @@ const RULES = {
   },
 };
 
-// ─────────────────────────────────────────────────────────────────────────────
-// INITIALISATION
-// ─────────────────────────────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('form-inscription');
   if (!form) return; // Ne s'exécute que sur la page contact
 
-  // ── Validation en temps réel (blur) ──────────────────────────────────────
   ['prenom', 'nom', 'email', 'telephone', 'naissance'].forEach(id => {
     const field = document.getElementById(id);
     if (!field || !RULES[id]) return;

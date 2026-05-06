@@ -56,14 +56,9 @@ $is_checked_box = fn(string $name, string $val): string
             METHOD → POST (jamais GET pour les données personnelles)
             NOVALIDATE → on gère la validation côté serveur + JS
           -->
-          <form id="form-inscription"
-                action="contact.php"
-                method="POST"
-                novalidate>
+          <form id="form-inscription"action="contact.php" method="POST" novalidate>
 
-          
-
-            <!-- ── Section 1 : Informations personnelles ── -->
+           <!-- ── Section 1 : Informations personnelles ── -->
             <div class="form-section-title">👤 Informations Personnelles</div>
 
             <div class="form-row">
